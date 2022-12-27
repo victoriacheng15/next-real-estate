@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run rome",
+      "type": "shell",
+      "command": "pnpm rome:run",
+      "isBackground": true
+    }
+  ]
+}
