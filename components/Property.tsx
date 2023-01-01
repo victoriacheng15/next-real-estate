@@ -5,15 +5,9 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
+import { PropertyProps } from "../types/Properties";
 
 import DefaultImage from "../assets/images/house.jpg";
-
-type PropertyProps = {
-	[key: string]: string;
-	// property: {
-	//   [key: string]: string
-	// }
-};
 
 const Property = ({
 	coverPhoto,
@@ -27,6 +21,7 @@ const Property = ({
 	isVerified,
 	externalID,
 }: PropertyProps) => {
+
 	return (
 		<Link href={`/property/${externalID}`} passHref>
 			<Flex
@@ -51,12 +46,12 @@ const Property = ({
 						alignItems="center"
 						justifyContent="space-between"
 					>
-						<Flex alignItems="center">
-							<Box paddingRight="3" color="green.400">
+						<Flex alignItems="center" gap="2">
+							<Box color="green.400">
 								{isVerified && <GoVerified />}
 							</Box>
 							<Text fontWeight='bold' fontSize='lg'>
-								AED {millify(Number(price))}
+								AED {millify(price)}
 								{rentFrequency && `/${rentFrequency}`}
 							</Text>
 							<Box>
@@ -72,7 +67,7 @@ const Property = ({
 						color='blue.400'
 					>
 						{rooms}
-						<FaBed /> | {baths} <FaBath /> | {millify(Number(area))} sqft <BsGridFill />
+						<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
 					</Flex>
 					<Text fontSize='lg'>
 						{title.length > 30 ? `${title.substring(0, 30)}...` : title}
