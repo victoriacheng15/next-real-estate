@@ -14,9 +14,9 @@ import { BsSearch } from "react-icons/bs";
 import { FiKey } from "react-icons/fi";
 
 const Navbar = () => (
-	<Flex p='2' borderBottom='1px' borderColor='gray.100'>
-		<Box fontSize='3xl' color='blue.400' fontWeight='bold'>
-			<Link href='/'>Realtor</Link>
+	<Flex p="2" borderBottom="1px" borderColor="gray.100">
+		<Box fontSize="3xl" color="blue.400" fontWeight="bold">
+			<Link href="/">Realtor</Link>
 		</Box>
 		<Spacer />
 		<Box>
@@ -24,20 +24,20 @@ const Navbar = () => (
 				<MenuButton
 					as={IconButton}
 					icon={<FcMenu />}
-					variant='outline'
-					color='red.400'
+					variant="outline"
+					color="red.400"
 				/>
 				<MenuList>
-					<Link href='/'>
+					<Link href="/">
 						<MenuItem icon={<FcHome />}>Home</MenuItem>
 					</Link>
-					<Link href='/search'>
+					<Link href="/search">
 						<MenuItem icon={<BsSearch />}>Search</MenuItem>
 					</Link>
-					<Link href='/search?purpose=for-sale'>
+					<Link href="/search?purpose=for-sale">
 						<MenuItem icon={<FcAbout />}>Buy Property</MenuItem>
 					</Link>
-					<Link href='/search?purpose=for-rent'>
+					<Link href="/search?purpose=for-rent">
 						<MenuItem icon={<FiKey />}>Rent Property</MenuItem>
 					</Link>
 				</MenuList>
