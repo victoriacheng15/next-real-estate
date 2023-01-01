@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Box, Flex } from "@chakra-ui/react";
 import Banner from "../components/Banner";
 import Property from "../components/Property";
-import { Properties } from "../types/Properties";
+import { Properties } from "../types/properties";
 
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 
