@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import { Box, layout } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 type ChildrenProps = {
 	children: ReactNode
@@ -20,11 +22,11 @@ const Layout = ({ children }: ChildrenProps) => {
 			</Head>
 			<Box maxWidth="1280px" m="auto">
 				<header>
-					<h1>navbar</h1>
+					<Navbar />
 				</header>
 				<main>{children}</main>
 				<footer>
-					<h1>footer</h1>
+					<Footer />
 				</footer>
 			</Box>
 		</>
