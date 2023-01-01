@@ -2,7 +2,11 @@ import Head from "next/head";
 import { ReactNode } from "react";
 import { Box, layout } from "@chakra-ui/react";
 
-const Layout = ({ children }: { children: ReactNode }) => {
+type ChildrenProps = {
+	children: ReactNode
+}
+
+const Layout = ({ children }: ChildrenProps) => {
 	return (
 		<>
 			<Head>
