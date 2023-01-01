@@ -21,16 +21,15 @@ const Property = ({
 	isVerified,
 	externalID,
 }: PropertyProps) => {
-
 	return (
 		<Link href={`/property/${externalID}`} passHref>
 			<Flex
-				flexWrap='wrap'
-				w='420px'
-				p='5'
-				paddingTop='0px'
+				flexWrap="wrap"
+				w="420px"
+				p="5"
+				paddingTop="0px"
 				justifyContent="center"
-				cursor='pointer'
+				cursor="pointer"
 			>
 				<Box>
 					<Image
@@ -47,29 +46,27 @@ const Property = ({
 						justifyContent="space-between"
 					>
 						<Flex alignItems="center" gap="2">
-							<Box color="green.400">
-								{isVerified && <GoVerified />}
-							</Box>
-							<Text fontWeight='bold' fontSize='lg'>
+							<Box color="green.400">{isVerified && <GoVerified />}</Box>
+							<Text fontWeight="bold" fontSize="lg">
 								AED {millify(price)}
 								{rentFrequency && `/${rentFrequency}`}
 							</Text>
 							<Box>
-								<Avatar size='sm' src={agency?.logo?.url} />
+								<Avatar size="sm" src={agency?.logo?.url} />
 							</Box>
 						</Flex>
 					</Flex>
 					<Flex
-						alignItems='center'
-						p='1'
-						justifyContent='space-between'
-						w='250px'
-						color='blue.400'
+						alignItems="center"
+						p="1"
+						justifyContent="space-between"
+						w="250px"
+						color="blue.400"
 					>
 						{rooms}
 						<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
 					</Flex>
-					<Text fontSize='lg'>
+					<Text fontSize="lg">
 						{title.length > 30 ? `${title.substring(0, 30)}...` : title}
 					</Text>
 				</Box>

@@ -5,8 +5,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 type ChildrenProps = {
-	children: ReactNode
-}
+	children: ReactNode;
+};
 
 const Layout = ({ children }: ChildrenProps) => {
 	return (

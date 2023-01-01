@@ -14,7 +14,13 @@ const Banner = ({
 	linkName,
 	buttonText,
 }: BannerProps) => (
-	<Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10" gap="8">
+	<Flex
+		flexWrap="wrap"
+		justifyContent="center"
+		alignItems="center"
+		m="10"
+		gap="8"
+	>
 		<Image src={imageUrl} width={500} height={300} alt="banner" />
 		<Box>
 			<Text color="gray.500" fontSize="sm" fontWeight="medium">
