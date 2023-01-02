@@ -1,6 +1,6 @@
-type Url = { url: string };
+export type Url = { url: string };
 
-type Agency = { logo: Url };
+export type Agency = { logo: Url };
 
 export type PropertyProps = {
 	id: number;
