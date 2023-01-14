@@ -14,7 +14,7 @@ export default function Home({
 }: Properties) {
 	return (
 		<>
-			<Box>
+			<Flex flexDir="column" gap="8" paddingBlock="8">
 				<Banner
 					purpose="For Sale"
 					title1="Rental Homes for"
@@ -25,7 +25,7 @@ export default function Home({
 					linkName="/search?purpose=for-rent"
 					imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
 				/>
-				<Flex flexWrap="wrap" justifyContent="center">
+				<Flex flexWrap="wrap" justifyContent="center" gap="10">
 					{propertiesForRent.map((property) => (
 						<Property key={property.id} {...property} />
 					))}
@@ -40,12 +40,12 @@ export default function Home({
 					linkName='/search?purpose=for-sale'
 					imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
 				/>
-				<Flex flexWrap="wrap">
+				<Flex flexWrap="wrap" justifyContent="center" gap="10">
 					{propertiesForSale.map((property) => (
 						<Property key={property.id} {...property} />
 					))}
 				</Flex>
-			</Box>
+			</Flex>
 		</>
 	);
 }
