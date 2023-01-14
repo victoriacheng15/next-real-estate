@@ -17,10 +17,6 @@ import { filterData, getFilterValues } from "../utils/filterData";
 
 const SearchFilter = () => {
 	const [filters] = useState(filterData);
-	// const [searchTerm, setSearchTerm] = useState("");
-	// const [locationData, setLocationData] = useState();
-	// const [showLocations, setShowLocations] = useState(false);
-	// const [loading, setLoading] = useState(false);
 	const router = useRouter();
 
 	const searchProperties = (filterValues: Record<string, string>) => {

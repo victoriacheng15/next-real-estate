@@ -18,7 +18,7 @@ const Banner = ({
 		flexWrap="wrap"
 		justifyContent="center"
 		alignItems="center"
-		m="10"
+		marginInline="10"
 		gap="8"
 	>
 		<Image src={imageUrl} width={500} height={300} alt="banner" />
